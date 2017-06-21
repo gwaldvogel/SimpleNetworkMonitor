@@ -14,7 +14,7 @@ class NetworkMonitoringDaemon extends Command
      *
      * @var string
      */
-    protected $signature = 'monitor';
+    protected $signature = 'monitor {--o|once}';
 
     /**
      * The console command description.
@@ -50,7 +50,7 @@ class NetworkMonitoringDaemon extends Command
         {
             foreach($tests as $i => $testValues)
             {
-                $connection = @fsockopen($testValues[0], $testValues[1], $errno, $errstr, 10);
+                $connection = @fsockopen($testValues[0], $testValues[1], $errno, $errstr, 5);
                 $status = false;
                 if(is_resource($connection))
                 {
@@ -75,6 +75,8 @@ class NetworkMonitoringDaemon extends Command
 
                 }
             }
+            if($this->option('once'))
+                break;
         }
     }
 
