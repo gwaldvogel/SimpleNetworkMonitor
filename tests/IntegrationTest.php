@@ -13,7 +13,7 @@ class IntegrationTest extends TestCase
         Artisan::call('monitor', ['-o' => 'true']);
         $this->get('/api/status')
             ->seeJsonStructure([
-                '*' => ['name', 'ip', 'port', 'status', 'time', 'error']
+                '*' => ['name', 'ip', 'port', 'status', 'time', 'error'],
             ]);
     }
 }
