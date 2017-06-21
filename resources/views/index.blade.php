@@ -14,6 +14,11 @@
         <div class="col-md-12" id="statusPanel">
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12 text-center" style="margin-bottom: 20px;">
+                <a href="https://github.com/gwaldvogel/SimpleNetworkMonitor">Powered by SimpleNetworkMonitor</a>
+        </div>
+    </div>
     <script src="{{ url('vendors/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ url('vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script>
