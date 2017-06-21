@@ -3,10 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Console\Commands\NetworkMonitoringDaemon;
-use App\Sensor;
-use App\SystemState;
 use Illuminate\Support\Facades\Cache;
-
 
 class ApiController extends Controller
 {
@@ -14,11 +11,9 @@ class ApiController extends Controller
     {
         $tests = config('app.connection_tests');
         $return = [];
-        foreach($tests as $test)
-        {
+        foreach ($tests as $test) {
             $result = Cache::get(NetworkMonitoringDaemon::getCacheName($test[2]));
-            if($result)
-            {
+            if ($result) {
                 $return[] = $result;
             }
         }
