@@ -1,5 +1,6 @@
+[![Build Status](https://travis-ci.org/gwaldvogel/SimpleNetworkMonitor.svg?branch=master)](https://travis-ci.org/gwaldvogel/SimpleNetworkMonitor)
+[![StyleCI](https://styleci.io/repos/87975880/shield?branch=master)](https://styleci.io/repos/87975880)
 # SimpleNetworkMonitor
-
 This project was born on a weekend where my internet access got restricted due to a firewall malfunction.
 I created this simple network monitor to run permanently on a Raspberry Pi.
 It is basically constantly checking a list of predefined IPs/Hostnames and Ports (TCP only).
