@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => 'noreply@pisec.org',
-        'name' => 'PiSec',
+        'name'    => 'PiSec',
     ],
 
     /*
