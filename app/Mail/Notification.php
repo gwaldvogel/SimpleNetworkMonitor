@@ -2,11 +2,11 @@
 
 namespace App\Mail;
 
+use App\Event;
+use App\Sensor;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use App\Sensor;
-use App\Event;
 
 class Notification extends Mailable
 {
@@ -38,9 +38,9 @@ class Notification extends Mailable
         return $this->view('emails.notification')
             ->subject('PiSec Notification')
             ->with([
-                "eventType" => $this->event->type,
-                "createdAt" => $this->event->created_at,
-                "sensorDescription" => $this->sensor->description
+                'eventType' => $this->event->type,
+                'createdAt' => $this->event->created_at,
+                'sensorDescription' => $this->sensor->description,
             ]);
     }
 }
